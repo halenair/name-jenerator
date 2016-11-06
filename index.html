@@ -1,0 +1,68 @@
+<!--
+/////////////////////////////////////////////////////////////////////////////
+// Nickname Generator
+// Copyright © 2016 cirkit <fb/chapman.kc>
+// This work is free. You can redistribute it and/or modify it under the
+// terms of the Do What The Fuck You Want To Public License, Version 2,
+// as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+////////////////////////////////////////////////////////////////////////////
+
+One of me struggles in life is naming, ...things. Made a name generator based on adjectives and animals to end me dilemma. I call it, *drum roll* Nickname Jenerator.
+This thing is a life saver so I hope you find it useful too. You can even modify it to suit yer needs.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nickname Jenerator</title>
+
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="script.js"></script>
+	<script>
+		var jen = function () {
+			randomName = namejen(); // get a name from our jenerator 
+			document.title = randomName + " - Nickname Jenerator"; 
+			with(x = document.getElementById('name')){
+				value = randomName;
+				focus();
+			}
+		}
+	</script>
+	<style>
+		body {
+  			background:#2f2f2f;
+  			margin-top: 80px;
+		}
+		.panel-body{
+			padding-top: 25px;
+			padding-bottom: 30px;
+		}
+	</style>
+</head>
+<body onload="jen()">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-primary">
+					<div class="panel-heading lead">Nickname Jenerator</div>
+					<div class="panel-body">
+					<p>Jenerate cool, weird, and funny nicknames!</p><br>
+						<input type="text" id="name" class="form-control input-lg text-center">
+						<br>
+						<button class="btn btn-success btn-lg" onclick="jen()">Go</button>
+					</div>
+					<div class="panel-footer">
+						
+						<small>cirkit 2016</small>
+						<hr>
+						Like <a href="https://www.facebook.com/happyxwanderers">The Happy Wanderers</a> on Facebook!
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
